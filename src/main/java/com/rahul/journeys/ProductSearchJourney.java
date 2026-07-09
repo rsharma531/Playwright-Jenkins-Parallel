@@ -28,7 +28,7 @@ public class ProductSearchJourney implements Journey {
 
         ctx.step("Search for '" + SEARCH_TERM + "'");
         products.searchFor(SEARCH_TERM);
-        assertThat(products.resultsTitle()).hasText("Searched Products");
+        assertThat(products.resultsTitle()).hasText("Wrong Title");
 
         int count = products.productCards().count();
         ctx.step("Search returned " + count + " products");
