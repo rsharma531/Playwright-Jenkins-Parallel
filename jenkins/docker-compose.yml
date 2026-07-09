@@ -1,0 +1,20 @@
+# Local Jenkins for practicing the pipeline:  docker compose up -d --build
+# UI at http://localhost:8080
+#
+# Runs as root so the container can use the mounted Docker socket without
+# fiddling with group ids — fine for a local sandbox, not for production.
+services:
+  jenkins:
+    build: .
+    container_name: jenkins-playwright
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    user: root
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
+volumes:
+  jenkins_home:

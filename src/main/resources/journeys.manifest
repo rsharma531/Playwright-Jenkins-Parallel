@@ -1,0 +1,10 @@
+# Journey manifest — the single source of truth for what the suite runs.
+# One fully-qualified Journey class per line. Lines starting with # are ignored.
+#
+# Jenkins shards and local runs both read THIS file; the shard picks its slice
+# by sorted line index (i % SHARD_TOTAL == SHARD_INDEX). Add a journey class
+# below and it is automatically picked up everywhere — no Jenkinsfile change.
+com.rahul.journeys.UserSignupJourney
+com.rahul.journeys.GuestAddToCartJourney
+com.rahul.journeys.ProductSearchJourney
+com.rahul.journeys.NewsletterSubscriptionJourney

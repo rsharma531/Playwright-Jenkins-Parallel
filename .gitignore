@@ -1,0 +1,8 @@
+target/
+.m2repo/
+shard-*/
+.idea/
+*.iml
+.vscode/
+.DS_Store
+.claude/

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- No parallel="..." here on purpose: TestNG is only the launcher.
+     Concurrency is the JourneyEngine's ForkJoinPool (WORKERS env var). -->
+<suite name="Playwright Journey Suite" verbose="1">
+    <test name="Journeys (this shard)">
+        <classes>
+            <class name="com.rahul.tests.JourneySuiteTest"/>
+        </classes>
+    </test>
+</suite>
